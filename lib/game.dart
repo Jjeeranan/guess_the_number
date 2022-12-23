@@ -6,11 +6,12 @@ enum GuessResult{
 }
 
 class Game{
-  final int answer = Random().nextInt(100)+1;
+  final int answer ;
   int _totalGuesses = 0;
 
   // constructor
-  Game(){
+  Game({required int maxRandom}) :
+        answer = Random().nextInt(maxRandom) + 1 {
     print('Answer is $answer');
   }
 

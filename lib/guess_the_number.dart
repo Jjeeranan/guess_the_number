@@ -5,7 +5,8 @@ import 'dart:io';
 import 'game.dart';
 
 void main(){
-  var game = Game();
+
+  var game = Game(maxRandom : 100);
   late GuessResult guessResult ;
 
 
