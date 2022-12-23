@@ -7,10 +7,11 @@ enum GuessResult{
 
 class Game{
   final int answer ;
-  int _totalGuesses = 0;
+  int _totalGuesses =0;
+  static List<int> mylist = [];
 
   // constructor
-  Game({required int maxRandom}) :
+  Game(int maxRandom) :
         answer = Random().nextInt(maxRandom) + 1 {
     print('Answer is $answer');
   }
@@ -28,5 +29,8 @@ class Game{
   }
   int get totalGuesses{
     return _totalGuesses;
+  }
+  List get round{
+    return mylist;
   }
 }
