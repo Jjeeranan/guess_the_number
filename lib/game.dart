@@ -13,13 +13,14 @@ class Game{
   // constructor
   Game(int maxRandom) :
         answer = Random().nextInt(maxRandom) + 1 {
-    print('Answer is $answer');
+    /*print('Answer is $answer');*/
   }
 
   GuessResult doGuess(int guess){
     _totalGuesses++;
 
     if(guess == answer) {
+      mylist.add(_totalGuesses);
       return GuessResult.correct;
     }else if(guess > answer) {
       return GuessResult.toHigh;

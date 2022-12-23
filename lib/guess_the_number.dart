@@ -14,11 +14,11 @@ void main() {
       stdout.write('Enter a maximum number to random: ');
       var maxRandom = stdin.readLineSync();
       if (maxRandom == null) {
-        return;
+        continue;
       }
       var max = int.tryParse(maxRandom);
       if (max == null) {
-        return;
+        continue;
       }
       game = Game(max);
 
@@ -28,7 +28,7 @@ void main() {
       print('├❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ');
 
       do {
-        stdout.write('│ Guess the number between 1 and 100 : ');
+        stdout.write('│ Guess the number between 1 and $maxRandom : ');
         var input = stdin.readLineSync();
 
         if (input == null) {
